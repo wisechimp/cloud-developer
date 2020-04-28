@@ -1,8 +1,12 @@
+import * as dotenv from 'dotenv'
 import express from 'express';
 import bodyParser from 'body-parser';
 import {filterImageFromURL, deleteLocalFiles} from './util/util';
 
 (async () => {
+
+  // Initialise dotenv to pass environmental variables to the project
+  dotenv.config()
 
   // Init the Express application
   const app = express();
